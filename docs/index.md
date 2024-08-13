@@ -28,31 +28,31 @@ OpenNARS 4 inherits the same grammar from previous versions. For details, please
 
 ## NARS
 
-Based on the formal language (*Narsese*) and the logic theory (NAL), at the topmost level, the newest architecture of NARS involves *memory*, *inference engine*, *channels* as the interface with the environment, and *control mechanism* that organize inference steps together and modifies the inner states of *memroy* and *channels*.
+Based on the formal language (*Narsese*) and the logic theory (NAL), at the topmost level, the newest architecture of NARS involves *memory*, an *inference engine*, *channels* as the interface with the environment, and a *control mechanism* that organizes inference steps together and modifies the inner states of *memory* and *channels*.
 
 The memory of NARS can be viewed as a network of concepts, also called as conceptual network. It is implemented based on some data-structures.
-OpenNARS 4 adopts the same [memory](https://github.com/opennars/opennars/wiki/Memory-Overview) design and basic data-structures (including [`Concept`](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes), [`Task` and `Belief`](https://github.com/opennars/opennars/wiki/Task-and-Belief), [`TaskLink` and `TermLink`](https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink), *etc*.) with version 3. 
+OpenNARS 4 adopts the same [memory](https://github.com/opennars/opennars/wiki/Memory-Overview) design and basic data-structures (including [`Concept`](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes), [`Task` and `Belief`](https://github.com/opennars/opennars/wiki/Task-and-Belief), [`TaskLink` and `TermLink`](https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink), *etc*.) as version 3. 
 
 
 However, OpenNARS 4 adopts different ways to implement the inference engine, and some new features (see [here](#New-Features)) are added to the control mechanism.
 
-For the moment, there are two alernatives of inference engin in OpenNARS 4 -- a declarative approach to implement the [inference engine](https://drive.google.com/file/d/1uIjRqeCAU-IRKGo_tNJN8F8ghHI8q1qD/view) (though not fully implemented), and the other that is similar to OpenNARS 3.
+For the moment, there are two alternatives to the inference engine in OpenNARS 4 -- a declarative approach to implement the [inference engine](https://drive.google.com/file/d/1uIjRqeCAU-IRKGo_tNJN8F8ghHI8q1qD/view) (though not fully implemented), and the other that is similar to OpenNARS 3.
 
 # New Features in OpenNARS 4
 
- - **Architecture**: The new architecture (see [Fig. 1.](#fig1-architecture) below) contains a memory, an inference engince (both of which are remains the same with the old version), an *internal experience buffer*, and an *overall experience buffer*. There are ***multiple channels*** as the interface between the system and the environment. For the momement, the following channels have been implemented or are under consideration:
+ - **Architecture**: The new architecture (see [Fig. 1.](#fig1-architecture) below) contains a memory, an inference engine (both of which remain the same as the old version), an *internal experience buffer*, and an *overall experience buffer*. There are ***multiple channels*** that act as the interface between the system and the environment. For the moment, the following channels have been implemented or are under consideration:
    - **Multiple Channels**
      - **Consle-Channel**: An interface for admins to check the outputs and states of the system.
-     - **User-Channel**: An interface of common users to interact with the system using *Narsese*.
+     - **User-Channel**: An interface for common users to interact with the system using *Narsese*.
      - **Knowledge-Base-Channels** (not implemented yet): An interface to knowledge bases, *e.g.*, *ConceptNet*, other Knowledge Graphs, LLMs, *etc*.
-     - **Sensorimotor-Channel** (not implemented yet): This channel is specialzed for the sensorimotor procedures. For example, it helps the system to play the pong game.
+     - **Sensorimotor-Channel** (not implemented yet): This channel is specialized for sensorimotor procedures. For example, it helps the system to play the pong game.
    - **Buffers**
      - **Internal experience buffer**: It organizes the system's internal experience of its thinking activity.
-     - **Overall experience buffer**: It organizes both internal experience (from the internal experience buffer) and external experience (from channels, which organize the experence from the outer environment).
+     - **Overall experience buffer**: It organizes both internal experience (from the internal experience buffer) and external experience (from channels, which organize the experience from the outer environment).
      - A critical role of the two buffers is learning temporal relations among events (not fully implemented yet).
-   - The new architecture was mentioned in the old versions' technical reports, but was not implemented succesfully.
+   - The new architecture was mentioned in the old versions' technical reports but was not implemented successfully.
  - **Global Evaluators:** The four global evaluators mentioned in the [old technical report](https://cis.temple.edu/tagit/publications/PAGI-TR-11.pdf) are implemented in this version. 
-    - *Satisfaction*: the extent to which the current situation meet the system’s desires,
+    - *Satisfaction*: the extent to which the current situation meets the system’s desires,
     - *Alertness*: the extent to which the system’s knowledge is insufficient,
     - *Busyness*: the extent to which the system’s time resource is insufficient,
     - *Well-being*: the extent to which the system’s “body” functions as expected.
