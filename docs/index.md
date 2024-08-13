@@ -65,7 +65,8 @@ Fig. 1. The current architecture of NARS [^3]
 
 # Technical Report
 
-The OpenNARS 4 Technical Report is still in progress. Hopefully, it will be published in the near future.
+The OpenNARS 4 Technical Report is in progress. 
+<!-- Hopefully, it will be published in the near future. -->
 
 # Links
 
