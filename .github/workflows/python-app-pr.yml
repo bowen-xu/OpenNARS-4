@@ -1,0 +1,83 @@
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python application - PR
+
+on:
+  pull_request:
+    branches: [ "dev" ]
+
+permissions:
+  contents: read
+  pull-requests: write 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.7.x
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.7"
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: Test with unittest
+      continue-on-error: true
+      run: |
+        python -m unittest discover Tests/test_NAL/ -p "test_*.py" -v |& tee output-pr.txt
+    
+    - name: Download workflow artifact
+      uses: dawidd6/action-download-artifact@v3.0.0
+      with:
+        workflow: python-app-dev.yml
+        name: test-report
+        
+    - name: Extract number of failures and errors
+      run: |
+        tr '\r' '\n' < output-dev.txt > dev.txt
+        tr '\r' '\n' < output-pr.txt > pr.txt
+        tail -n +53 dev.txt > tmp.txt && mv tmp.txt dev.txt
+        tail -n +53 pr.txt > tmp.txt && mv tmp.txt pr.txt
+        echo "DEV=$(tail -n 2 dev.txt | head -n 1)" >> $GITHUB_ENV
+        echo "PR=$(tail -n 2 pr.txt | head -n 1)" >> $GITHUB_ENV
+        sed -i -n '/======================================================================/q;p' dev.txt
+        sed -i -n '/======================================================================/q;p' pr.txt
+        {
+          echo "TEST_RESULTS<<EOF"
+          diff -u dev.txt pr.txt || true
+          echo EOF
+        } >> "$GITHUB_ENV"
+        
+    - name: Update build summary
+      run: |
+        {
+          echo "dev.txt - DEV BRANCH: $DEV"
+          echo "pr.txt - PR BRANCH: $PR"
+          echo ""
+          echo "\`\`\`diff"
+          echo "$TEST_RESULTS"
+          echo "\`\`\`"
+        } >> $GITHUB_STEP_SUMMARY
+
+    - name: Comment on the PR
+      uses: thollander/actions-comment-pull-request@v2.4.3
+      with:
+        message: |
+          **dev.txt - DEV BRANCH: ${{ env.DEV }}**
+          **pr.txt - PR BRANCH: ${{ env.PR }}**
+
+          ```diff
+          ${{ env.TEST_RESULTS }}
+          ```
+        comment_tag: execution
+
+
