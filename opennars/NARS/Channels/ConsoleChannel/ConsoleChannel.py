@@ -174,17 +174,20 @@ class ConsoleChannel(NarseseChannel):
 
         # while revising a judgement
         if judgement_revised is not None:
+            channel_id = f"[{judgement_revised.channel_id}] " if judgement_revised.channel_id > -1 else ''
             print_out(PrintType.OUT, channel_id + judgement_revised.sentence.repr(),
                       *judgement_revised.budget)
 
         # while revising a goal
         if goal_revised is not None:
+            channel_id = f"[{goal_revised.channel_id}] " if goal_revised.channel_id > -1 else ''
             print_out(PrintType.OUT, channel_id + goal_revised.sentence.repr(),
                       *goal_revised.budget)
 
         # while answering a question for truth value
         if answers_question is not None:
             for answer in answers_question:
+                channel_id = f"[{answer.channel_id}] " if answer.channel_id > -1 else ''
                 print_out(
                     PrintType.ANSWER,
                     channel_id +
@@ -193,10 +196,12 @@ class ConsoleChannel(NarseseChannel):
         # while answering a quest for desire value
         if answers_quest is not None:
             for answer in answers_quest:
+                channel_id = f"[{answer.channel_id}] " if answer.channel_id > -1 else ''
                 print_out(PrintType.ACHIEVED, channel_id +
                           answer.sentence.repr(), *answer.budget)
         # while executing an operation
         if task_executed is not None:
+            channel_id = f"[{task_executed.channel_id}] " if task_executed.channel_id > -1 else ''
             print_out(
                 PrintType.EXE, channel_id +
                 f'''{task_executed.term.repr()} = {
