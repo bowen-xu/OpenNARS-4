@@ -6,7 +6,7 @@ OpenNARS is the open-source implementation of NARS. The reasoner "core" of OpenN
 
 # Foundations
 
-
+A recent overview of NARS can be found [here](https://proceedings.mlr.press/v192/wang22a/wang22a.pdf). This [introduction](https://cis.temple.edu/~pwang/NARS-Intro.html) of NARS is also recommended.
 
 ## *Narsese* as a Formal Language
 
