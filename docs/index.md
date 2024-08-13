@@ -40,7 +40,7 @@ For the moment, there are two alernatives of inference engin in OpenNARS 4 -- a 
 
 # New Features in OpenNARS 4
 
- - **Architecture**: The new architecture contains a memory, an inference engince (both of which are remains the same with the old version), an *internal experience buffer*, and an *overall experience buffer*. There are ***multiple channels*** as the interface between the system and the environment. For the momement, the following channels have been implemented or are under consideration:
+ - **Architecture**: The new architecture (see [Fig. 1.](#fig1-architecture) below) contains a memory, an inference engince (both of which are remains the same with the old version), an *internal experience buffer*, and an *overall experience buffer*. There are ***multiple channels*** as the interface between the system and the environment. For the momement, the following channels have been implemented or are under consideration:
    - **Multiple Channels**
      - **Consle-Channel**: An interface for admins to check the outputs and states of the system.
      - **User-Channel**: An interface of common users to interact with the system using *Narsese*.
@@ -59,8 +59,10 @@ For the moment, there are two alernatives of inference engin in OpenNARS 4 -- a 
  - **[Declarative Inference Engine](https://drive.google.com/file/d/1uIjRqeCAU-IRKGo_tNJN8F8ghHI8q1qD/view)** (in progress)
 
 
+<span id="fig1-architecture"></span>
+
 ![Current architecture of NARS](./assets/img/architecture.png)
-Fig. 1. The current architecture of NARS [^3]
+**Fig. 1.** The current architecture of NARS [^3]
 
 
 # Technical Report
