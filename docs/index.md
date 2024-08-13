@@ -28,7 +28,7 @@ OpenNARS 4 inherits the same grammar from previous versions. For details, please
 
 ## NARS
 
-Based on the formal language (*Narsese*) and the logic theory (NAL), an the topmost level, the newest architecture of NARS involves *memory*, *inference engine*, *channels* as the interface with the environment, and *control mechanism* that organize inference steps together and modifies the inner states of *memroy* and *channels*.
+Based on the formal language (*Narsese*) and the logic theory (NAL), at the topmost level, the newest architecture of NARS involves *memory*, *inference engine*, *channels* as the interface with the environment, and *control mechanism* that organize inference steps together and modifies the inner states of *memroy* and *channels*.
 
 The memory of NARS can be viewed as a network of concepts, also called as conceptual network. It is implemented based on some data-structures.
 OpenNARS 4 adopts the same [memory](https://github.com/opennars/opennars/wiki/Memory-Overview) design and basic data-structures (including [`Concept`](https://github.com/opennars/opennars/wiki/Concept-Object:-Content-and-Attributes), [`Task` and `Belief`](https://github.com/opennars/opennars/wiki/Task-and-Belief), [`TaskLink` and `TermLink`](https://github.com/opennars/opennars/wiki/TaskLink-and-TermLink), *etc*.) with version 3. 
