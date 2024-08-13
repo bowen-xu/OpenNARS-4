@@ -1,4 +1,4 @@
-# from pynars.NARS.DataStructures._py.Link import TermLink
+# from opennars.NARS.DataStructures._py.Link import TermLink
 from math import log2
 from opennars.Narsese import Budget, Truth, Term, Task, Goal, Judgement
 from opennars.Config import Config

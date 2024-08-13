@@ -5,7 +5,7 @@ from opennars.NARS.DataStructures._py.Channel import Channel
 
 from opennars.NARS.DataStructures._py.Link import TaskLink
 from opennars.NARS.InferenceEngine import TemporalEngine
-# from pynars.NARS.Operation import Interface_Awareness
+# from opennars.NARS.Operation import Interface_Awareness
 from opennars.Narsese._py.Budget import Budget
 from opennars.Narsese._py.Statement import Statement
 from opennars.Narsese._py.Task import Belief

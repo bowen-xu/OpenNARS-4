@@ -1,4 +1,4 @@
-'''Mimic from the pynars.Console module and mount an NARS
+'''Mimic from the opennars.Console module and mount an NARS
 Based on the original interface, an NARS terminal is internally called that can be copied by constructing objects, and the underlying interface is exposed to other programs
 Principle: Not responsible for "advanced command processing" other than basic command line operations
 '''
@@ -9,7 +9,7 @@ import argparse  # for cmdline
 # compatible type annotation
 from typing import List, Dict, Tuple, Union
 
-# pynars
+# opennars
 from opennars.utils.Print import print_out as print_out_origin
 from opennars.NARS import Reasoner
 from opennars.Narsese import Task
@@ -98,7 +98,7 @@ class NARSInterface:
     def out_message_no_color(type: PrintType, content,
                              p: float = None, d: float = None, q: float = None,
                              comment_title: str = None):
-        ''''from pynars.utils.Print import out_print'''
+        ''''from opennars.utils.Print import out_print'''
         # show_budget = True
         # if isinstance(p, float) and isinstance(d, float) and isinstance(q, float):
         #     if p<0 or p>1 or q<0 or q>1 or d<0 or d>1:

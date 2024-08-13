@@ -1,4 +1,4 @@
-# from pynars.Narsese._py.Task import Task
+# from opennars.Narsese._py.Task import Task
 from .Truth import Truth
 from .Term import Term
 from .Statement import Statement

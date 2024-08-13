@@ -97,7 +97,7 @@ class Config:
     @classmethod
     def apply(cls):
         '''Apply setting values of hyper-parameters'''
-        # from pynars.NARS import DataStructures
+        # from opennars.NARS import DataStructures
         # # Budget
         # DataStructures.Budget.priority = cls.priority
         # DataStructures.Budget.durability = cls.durability

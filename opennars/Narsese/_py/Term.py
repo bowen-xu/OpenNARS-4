@@ -5,7 +5,7 @@ from typing import Iterable, List, Set, Type
 from enum import Enum
 from opennars.utils.IndexVar import IndexVar
 from ordered_set import OrderedSet
-# from pynars.utils.tools import find_pos_with_pos, find_var_with_pos
+# from opennars.utils.tools import find_pos_with_pos, find_var_with_pos
 from copy import copy, deepcopy
 from bidict import bidict
 from opennars.utils.IndexVar import IntVar

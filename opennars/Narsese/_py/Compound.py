@@ -1,4 +1,4 @@
-# from pynars.NAL.Functions.ExtendedBooleanFunctions import Or
+# from opennars.NAL.Functions.ExtendedBooleanFunctions import Or
 from copy import copy
 from opennars.Config import Enable
 from opennars.Narsese._py.Interval import Interval
