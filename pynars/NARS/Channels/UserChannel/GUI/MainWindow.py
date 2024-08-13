@@ -30,7 +30,7 @@ class NARSWindow(QMainWindow):
         '''
         self.setGeometry(0, 0, 1000, 618)
         self._center_window()
-        self.setWindowTitle('Open-NARS v4.0.0 (PyNARS)')
+        self.setWindowTitle('Open-NARS v4.0.0')
 
         central_widget = QWidget(self)
         self.setCentralWidget(central_widget)

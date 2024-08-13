@@ -1,4 +1,2 @@
-__version__ = 'v0.0.2 pre-alpha'
+__version__ = 'v4.0.0 alpha'
 version = __version__.split(' ')[0].lstrip('v')
-
-print(f'PyNARS version {__version__}')
