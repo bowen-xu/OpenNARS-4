@@ -22,8 +22,8 @@ title: OpenNARS 4 for Research
 email: bowen.xul@temple.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Open-NARS is the open source version of the NARS project, a general-purpose AI system, designed in the framework of a reasoning system, which attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc., so as to provide a unified theory, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.
-baseurl: "/docs" # the subpath of your site, e.g. /blog
-url: "https://bowen-xu.github.io/OpenNARS-4" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/docs" # the subpath of your site, e.g. /blog
+# url: "https://bowen-xu.github.io/OpenNARS-4" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
