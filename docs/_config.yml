@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: OpenNARS 4 for Research
+title: OpenNARS 4
 email: bowen.xul@temple.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Open-NARS is the open source version of the <a style="color: #fff" href="https://cis.temple.edu/~pwang/NARS-Intro.html">NARS</a> project, a general-purpose AI system, designed in the framework of a reasoning system, which attempts to uniformly explain and reproduce many cognitive facilities, including reasoning, learning, planning, etc., so as to provide a unified theory, model, and system for AI as a whole. The ultimate goal of this research is to build a thinking machine.

@@ -47,15 +47,15 @@ For the moment, there are two alernatives of inference engin in OpenNARS 4 -- a 
      - **Knowledge-Base-Channels** (not implemented yet): An interface to knowledge bases, *e.g.*, *ConceptNet*, other Knowledge Graphs, LLMs, *etc*.
      - **Sensorimotor-Channel** (not implemented yet): This channel is specialzed for the sensorimotor procedures. For example, it helps the system to play the pong game.
    - **Buffers**
-     - **internal experience buffer**: It organizes the system's internal experience of its thinking activity.
-     - **overall experience buffer**: It organizes both internal experience (from the internal experience buffer) and external experience (from channels, which organize the experence from the outer environment).
+     - **Internal experience buffer**: It organizes the system's internal experience of its thinking activity.
+     - **Overall experience buffer**: It organizes both internal experience (from the internal experience buffer) and external experience (from channels, which organize the experence from the outer environment).
      - A critical role of the two buffers is learning temporal relations among events (not fully implemented yet).
-   - The new architecture was mentioned in the old versions' technical reports, but was not been implemented succesfully.
+   - The new architecture was mentioned in the old versions' technical reports, but was not implemented succesfully.
  - **Global Evaluators:** The four global evaluators mentioned in the [old technical report](https://cis.temple.edu/tagit/publications/PAGI-TR-11.pdf) are implemented in this version. 
-    - *satisfaction*: the extent to which the current situation meet the system’s desires,
-    - *alertness*: the extent to which the system’s knowledge is insufficient,
-    - *busyness*: the extent to which the system’s time resource is insufficient,
-    - *well-being*: the extent to which the system’s “body” functions as expected.
+    - *Satisfaction*: the extent to which the current situation meet the system’s desires,
+    - *Alertness*: the extent to which the system’s knowledge is insufficient,
+    - *Busyness*: the extent to which the system’s time resource is insufficient,
+    - *Well-being*: the extent to which the system’s “body” functions as expected.
  - **[Declarative Inference Engine](https://drive.google.com/file/d/1uIjRqeCAU-IRKGo_tNJN8F8ghHI8q1qD/view)** (in progress)
 
 
@@ -70,8 +70,8 @@ The OpenNARS 4 Technical Report is in progress.
 
 # Links
 
- - [OpenNARS 3 for Research](https://github.com/opennars/opennars)
- - [OpenNARS for Application](https://github.com/opennars/OpenNARS-for-Applications)
+ - [OpenNARS 3](https://github.com/opennars/opennars)
+ - [OpenNARS for Application (ONA)](https://github.com/opennars/OpenNARS-for-Applications)
  - [Temple AGI Team](https://cis.temple.edu/tagit/)
 
 ---
@@ -81,123 +81,3 @@ The OpenNARS 4 Technical Report is in progress.
 [^1]: Wang, Pei. [Non-axiomatic logic: A model of intelligent reasoning](https://www.worldscientific.com/worldscibooks/10.1142/8665#t=aboutBook). World Scientific, 2013.
 [^2]: Wang, Pei. "[The logic of intelligence](https://link.springer.com/chapter/10.1007/978-3-540-68677-4_2)." Artificial general intelligence. Berlin, Heidelberg: Springer Berlin Heidelberg, 2007. 31-62.
 [^3]: Wang, Pei, et al. [The conceptual design of openNARS 3.1](https://cis.temple.edu/tagit/publications/PAGI-TR-11.pdf). Technical report, Temple University, Philadelphia, United States, 2020.
-<!-- 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
-
-[Link to another page](./another-page.html).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### Header 4
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-``` -->
