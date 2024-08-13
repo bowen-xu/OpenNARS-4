@@ -10,7 +10,7 @@ __pycache__/
 *$py.class
 Tests/*.png
 *.pkl
-!pynars/utils/SparseLUT/*.pyd
+!opennars/utils/SparseLUT/*.pyd
 lab.ipynb
 .DS_Store
 cache

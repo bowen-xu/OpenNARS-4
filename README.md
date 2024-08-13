@@ -7,5 +7,5 @@ See the [project page](https://bowen-xu.github.io/OpenNARS-4/).
 
 To run the demo, execute the command
 ```
-python -m pynars
+python -m opennars
 ```
